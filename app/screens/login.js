@@ -20,7 +20,7 @@ const LoginScreen = ({ navigation }) => {
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.loginScreenContainer}>
           <View style={styles.loginFormView}>
-            <Text style={styles.logoText}>Frat Chat</Text>
+            <Text style={styles.logoText}>Diplomacy</Text>
             <TextInput
               autoCompleteType="tel"
               autoCorrect={false}
