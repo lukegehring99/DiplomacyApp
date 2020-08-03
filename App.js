@@ -8,15 +8,27 @@ import { createStackNavigator } from "@react-navigation/stack";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 import LoginScreen from "./app/screens/login";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
+import MapView from "./app/screens/MapView";
+import GamePage from "./app/screens/GamePage";
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={LoginScreen} />
+      <Stack.Navigator
+        screenOptions={
+          ({ headerStyle: { backgroundColor: "blue" } }, { headerShown: false })
+        }
+      >
+        <Stack.Screen
+          name="Home"
+          component={LoginScreen}
+          options={{ title: "" }}
+        />
         <Stack.Screen name="Main" component={ViewImageScreen} />
+        <Stack.Screen name="Games" component={GamePage} />
+        <Stack.Screen name="MapV" component={MapView} />
       </Stack.Navigator>
     </NavigationContainer>
   );

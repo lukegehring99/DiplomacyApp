@@ -52,7 +52,7 @@ function componentDidMount() {}
 function componentWillUnmount() {}
 
 function onLoginPress(navigation) {
-  navigation.navigate("Main", {});
+  navigation.navigate("Games", {});
 }
 
 async function onFbLoginPress() {
