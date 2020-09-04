@@ -40,6 +40,12 @@ const LoginScreen = ({ navigation }) => {
               onPress={() => onLoginPress(navigation)}
               title="Login this"
             />
+            <Button
+              onPress={() => {
+                navigation.openDrawer();
+              }}
+              title="open nav"
+            />
           </View>
         </View>
       </TouchableWithoutFeedback>
@@ -52,7 +58,7 @@ function componentDidMount() {}
 function componentWillUnmount() {}
 
 function onLoginPress(navigation) {
-  navigation.navigate("Games", {});
+  navigation.navigate("MapV", {});
 }
 
 async function onFbLoginPress() {
